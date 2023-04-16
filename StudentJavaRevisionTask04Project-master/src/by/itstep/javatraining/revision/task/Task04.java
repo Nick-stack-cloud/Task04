@@ -23,6 +23,9 @@ package by.itstep.javatraining.revision.task;
 
 public class Task04 {
     public static String task04(int a, int b, int c) {
-        return "";
+
+        return a >= b && a >= c ? Math.min(b, c) + " " + Math.max(b, c) + " " + a :
+                b >= a && b >= c ? Math.min(a, c) + " " + Math.max(a, c) + " " + b :
+                        Math.min(a, b) + " " + Math.max(a, b) + " " + c;
     }
 }
