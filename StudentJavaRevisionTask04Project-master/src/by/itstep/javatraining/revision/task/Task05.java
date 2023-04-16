@@ -35,6 +35,11 @@ package by.itstep.javatraining.revision.task;
 
 public class Task05 {
     public static boolean task05(int x, int y, int z, int a, int b, int c) {
-        return false;
+
+//        return x > 0 && y > 0 && z > 0 && a > 0 && b > 0 && c > 0 &&
+//                x * y * z <= a * b * c;//Видимо слишком легкое решение
+        return (x > 0 && y > 0 && z > 0 && a > 0 && b > 0 && c > 0) &&
+                ((x <= a && y <= b && z <= c) || (x <= b && y <=a && z <= c) || (x <= c && y <=b && z <= a) ||
+                (x <= a && y <= c && z <= b) || (x <= c && y <= a && z <= b) || (x <= b && y <= c && z <= a));
     }
 }
