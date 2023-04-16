@@ -38,6 +38,16 @@ package by.itstep.javatraining.revision.task;
 
 public class Task07 {
     public static int task07(int v, int t) {
-        return 0;
+        int a = v*t;
+        if(v<0){
+            a = 56+a;
+            while (a<56){
+                a+=56;
+            }
+        }
+        while(a>56){
+            a -= 56;
+        }
+        return t>=0?a:-1;
     }
 }
