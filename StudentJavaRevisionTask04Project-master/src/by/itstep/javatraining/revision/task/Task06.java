@@ -48,6 +48,19 @@ package by.itstep.javatraining.revision.task;
 
 public class Task06 {
     public static String task06(int a1, int b1, int c1, int a2, int b2, int c2) {
-        return "Error";
+        return a1>0 && b1>0 && c1>0 && a2>0 && b2>0 && c2>0?
+                (a1 == a2 && b1 == b2 && c1 == c2) || (a1 == b2 && b1 ==a2 && c1 == c2) ||
+                        (a1 == c2 && b1 ==b2 && c1 == a2) || (a1 == a2 && b1 == c2 && c1 == b2) ||
+                        (a1 == c2 && b1 == a2 && c1 == b2) || (a1 == b2 && b1 == c2 && c1 == a2)?
+                        "Boxes are equal.":
+                        (a1 <= a2 && b1 <= b2 && c1 <= c2) || (a1 <= b2 && b1 <=a2 && c1 <= c2) ||
+                                (a1 <= c2 && b1 <=b2 && c1 <= a2) || (a1 <= a2 && b1 <= c2 && c1 <= b2) ||
+                                (a1 <= c2 && b1 <= a2 && c1 <= b2) || (a1 <= b2 && b1 <= c2 && c1 <= a2)?
+                                "The first box is smaller than the second one.":
+                                (a1 >= a2 && b1 >= b2 && c1 >= c2) || (a1 >= b2 && b1 >=a2 && c1 >= c2) ||
+                                        (a1 >= c2 && b1 >=b2 && c1 >= a2) || (a1 >= a2 && b1 >= c2 && c1 >= b2) ||
+                                        (a1 >= c2 && b1 >= a2 && c1 >= b2) || (a1 >= b2 && b1 >= c2 && c1 >= a2)?
+                                        "The first box is larger than the second one.":"Boxes are incomparable."
+        :"Error.";
     }
 }
