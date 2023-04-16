@@ -36,6 +36,12 @@ package by.itstep.javatraining.revision.task;
 
 public class Task03 {
     public static int task03(int n, int m, int x, int y) {
-        return -1;
+        return n > 0 && m > 0 && x >= 0 && y >= 0 ?
+                n > m ?
+                        x > m - x && n - y > m - x && y > m - x ? m - x :
+                                (n - y > y && x > y) ? y : Math.min(n - y, x) :
+
+                        x > n - x && m - y > n - x && y > n - x ? n - x :
+                                (m - y > y && x > y) ? y : Math.min(m - y, x) : -1;
     }
 }
